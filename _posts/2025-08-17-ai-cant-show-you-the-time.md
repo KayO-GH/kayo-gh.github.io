@@ -42,7 +42,7 @@ Yeah... Nope!
 ---
 
 #### The Bias Implications
-- racism, sexism, and other isms
+<!-- - racism, sexism, and other isms
 - courts of law
 - death of originality
 
@@ -53,4 +53,4 @@ Yeah... Nope!
 #### Humanity's Advantage
 - Sensory linkages (https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb). 
   - Taste
-  - Feeling
+  - Feeling -->
