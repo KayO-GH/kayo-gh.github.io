@@ -13,7 +13,7 @@ This is strictly an image problem, which is why I used to word "show", not "tell
 
 Speaking of show and tell, let me just show you an example of what I mean from everybody's favourite PhD-level thinker, ChatGPT.
 
-*Now, [ChatGPT does not allow us to embed shared chats](https://www.reddit.com/r/OpenAI/comments/101cb7e/anyone_figured_out_how_to_put_chatopenaicom/), so you can either follow along with the screenshots below, or look at tht chat [here](https://chatgpt.com/share/68a1fde5-669c-8007-aeca-684bbebd3510). The screenshot route is better if I say so myself.*
+*Now, [ChatGPT does not allow us to embed shared chats](https://www.reddit.com/r/OpenAI/comments/101cb7e/anyone_figured_out_how_to_put_chatopenaicom/), so you can either follow along with the screenshots below, or look at tht chat [here](https://chatgpt.com/share/68a1fde5-669c-8007-aeca-684bbebd3510). The screenshot route is better if I say so myself.* 😅
 
 So let's begin. Simple first ask:  
 <img src="https://github.com/user-attachments/assets/b4fcfd55-43c1-432f-9456-b86b6f195529" alt="WhatsApp Image 2026-01-17 at 08 59 21" width="400px" />
