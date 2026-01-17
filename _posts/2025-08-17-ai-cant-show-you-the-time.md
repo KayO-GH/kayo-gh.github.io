@@ -12,7 +12,7 @@ This is strictly an image problem, which is why I used to word "show", not "tell
 
 Speaking of show and tell, let me just show you an example of what I mean from everybody's favourite PhD-level thinker, ChatGPT.
 
-<iframe src="https://chopboxlife.com" width="600" height="400"></iframe>
+<iframe src="https://chatgpt.com/share/68a1fde5-669c-8007-aeca-684bbebd3510" width="600" height="400"></iframe>
 
 #### The Bias Implications
 - 
