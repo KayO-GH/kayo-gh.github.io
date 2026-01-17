@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gearing Up for Deep Learning Indaba 2025"
-date: 2025-08-12
+date: 2025-08-16
 comments: true
 ---
 
