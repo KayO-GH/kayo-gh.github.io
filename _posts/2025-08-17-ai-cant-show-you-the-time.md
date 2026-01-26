@@ -40,6 +40,7 @@ Yeah... Nope!
 <img src="https://github.com/user-attachments/assets/c28627a3-cab9-4bfa-a85a-59560ea4ed15" alt="giphy" width="300px" />
 
 ---
+#### How We Got Here
 
 #### The Bias Implications
 <!-- - racism, sexism, and other isms
