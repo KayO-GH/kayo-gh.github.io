@@ -67,27 +67,44 @@ Then there's the creative side. As generative AI becomes the go-to tool for cont
 
 The clock problem is funny. The rest... Dystopia maybe?.
 
-##### A Few More Annoying Issues--Of Dashes & Delves
+##### Of Dashes & Delves
 
-As a wirter, this last section is the most irritating to put together.
+As a wirter, this section strikes a nerve.
 
-We now living in a reality where good writing is quickly *suspected* of being AI-generated simply because of specific word choices or punctuation marks. The very things that used to signify thoughtful, well-crafted essays are now ChatGPT red flags.
+We now live in a reality where good writing is quickly *suspected* of being AI-generated simply because of specific word choices or punctuation marks. The very things that used to signify thoughtful, well-crafted essays are now ChatGPT red flags.
 
-My favourite example is the em-dash (—), a perfectly legitimate punctuation mark that I have used, even when writing by hand, since I was in high school. Suddenly, today, use it a wee bit too much and you're a lazy producer of AI slop who lets robots write for you!
+My favourite example is the em-dash (—), a perfectly legitimate punctuation mark that I have used, even when writing by hand, since high school. Today, use it a wee bit too much and your work may be tagged as robot-written AI slop.
 
-This brings me to the infamous example of Paul Graham's beef with the word "delve."
+Which brings us to the infamous example of Paul Graham's beef with the word "delve". Paul G. is a highly respected tech entrepreneur and writer, so his opinions tend to be very well regarded, but I think this is one instance where he was very wrong on the money, and confidence while wrong is a nasty combination.
 
-In 2024, Y Combinator's Paul Graham released a [tweet](https://x.com/paulg/status/1777030573220933716) expressing his lack of trust in the human authenticity of any piece of text which uses the word "delve". The backlash was swift and brutal. Writers, academics, tech bros and anyone who gave a hoot on X pointed out that "delve" is, you know, an actual word that humans have been using long before AI came along... maybe not in Paul Graham's world, but given the... ermm, colourful... history of colonialism, the dynamics of vocabulary over time, the lack of monopoly by any group on the language today, and frankly, the fact that English speakers the world over couldn't care less, the whole thread was just a dumpster fire. A dumpster fire with graphs, yes, but a dumpster fire nevertheless.
+In 2024, Paul G. released a [tweet](https://x.com/paulg/status/1777030573220933716) expressing a lack of trust in the human authenticity of any piece of text which uses the word "delve". The backlash was swift and brutal. Writers, academics, tech bros, keyboard warriors on X pointed out that "delve" is, you know, an actual word that humans have been using long before AI came along... maybe not in Paul Graham's world, but given the... errr, colourful... history of colonialism, the dynamics of vocabulary over time, the lack of monopoly by any group on the language today, and frankly, the fact that English speakers the world over couldn't care less, the whole thread was a dumpster fire. A dumpster fire with graphs and strong opinions, yes, but a dumpster fire nonetheless.
 
-When we start judging ideas by the vocabulary transporting the ideas (which we all do sometimes), we stand the risk of ignoring some good ideas, and on occasion, hailing some polished turds as solid ideas, when a turd is in fact, just a turd.
+When we start judging ideas by the vocabulary transporting the ideas, which we all do sometimes, we stand the risk of ignoring some good ideas, and on occasion, hailing some polished turds as solid ideas, when a turd is in fact, just a turd.
 
-To his credit, Paul Graham's thoughts weren't entirely unfounded. It turns out that ChatGPT *does* love the word "delve." Like, a lot. The model was trained on a corpus of text where "delve" appeared frequently enough to become part of its linguistic fingerprint. So now, whenever someone writes naturally and happens to use the word, they risk being accused of outsourcing their thinking to a machine.
+To his credit, Paul G's thoughts weren't entirely unfounded. It turns out that ChatGPT *does* love the word "delve." Like, a lot. The model was trained on a corpus of text where "delve" appeared frequently enough to become part of its linguistic fingerprint. So now, whenever someone writes naturally and happens to use the word, they risk being accused of outsourcing their thinking to a machine.
 
 These false positives of AI detection affect students and professionals alike when their written work happens to appear *too polished*. The irony is thick: writing *well* makes you look suspicious. If your grammar is impeccable, your sentences flow smoothly, and you use semicolons correctly, congratulations—you're now a person of interest. (Ah, there I go using another em-dash 🤦🏾‍♂️)
 
-I don't know where this ends. Should I start writing *worse* on purpose just to prove I'm human? Should I throw in a few typos and some awkward phrasing? I've asked myself these questions an unhealthy number of times since I discovered these biases. 
+I don't know where this ends. Should I start writing *worse* on purpose just to prove I'm human? Should I throw in a few typos and some awkward phrasing? I've asked myself these questions an unhealthy number of times since I discovered these biases. I don't have the answer... yet.
 
-#### Humanity's Advantage
+---
+
+#### The Human Advantage
+Not too long ago I watched this YouTube short on [Sensory Linkages](https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb): the ability of the human brain to link different sensory modalities; in this case, sight and touch. How do you guess how something will feel, or even taste, just by looking at it?
+
+And these are links that are built in a person's brain over time as we grow and develop.
+
+The idea that AI has never tasted ice cream gives me comfort when it comes to the sanctity of the human experience. I've heard of electronic tasting, but there is just something about the human experience which AI and emerging technology has not captured, and in my opinion, will not capture, for a long time.
+
+The fact that AI, which understands time and understands watches as two separate entities, and cannot easily link the two concepts tells me something... ice cream is safe! 😂 ChatGPT knows ice cream is sweet, but how will it ever understand what exactly "sweet" means?
+
+The human experience; from social interactions and even deeper, to the level of the soul and spirit if you will, with all the complexities of emotion, culture, and yes, taste, is what sets us apart from the robots.
+
+That's where the value is.
+
+Put simply... AI could never. Or, at least, not any time soon.
+
+The kids will be fine. I can feel it. Something AI can't do.
 <!--
 - Sensory linkages (https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb). 
   - Taste
