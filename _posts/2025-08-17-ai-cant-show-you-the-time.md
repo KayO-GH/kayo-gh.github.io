@@ -104,8 +104,4 @@ That's where the value is.
 
 Put simply... AI could never. Or, at least, not any time soon.
 
-The kids will be fine. I can feel it. Something AI can't do.
-<!--
-- Sensory linkages (https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb). 
-  - Taste
-  - Feeling -->
+The kids will be fine. I can feel it... something AI can't do.
