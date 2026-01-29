@@ -5,6 +5,9 @@ date: 2026-01-29
 comments: true
 ---
 
+| <img width="600" height="600" alt="ai-time" src="https://github.com/user-attachments/assets/d5ec02d5-a605-41e8-b8a2-be72b621388c" /> | 
+|:--:| 
+| Photo credit: ChatGPT 😅 |
 
 #### The Problem
 Apparently this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025 as a passing comment: generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
