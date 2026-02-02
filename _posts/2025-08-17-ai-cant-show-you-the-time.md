@@ -125,6 +125,6 @@ Theres a value there that even babies can appreciate, but a supercomputer will n
 
 AI could never. Or, at least, not any time soon.
 
-The kids will be fine. I can feel it... something AI can't do.
+The kids will be fine. I can _feel_ it... something AI can't do.
 
 ✌🏾😎
