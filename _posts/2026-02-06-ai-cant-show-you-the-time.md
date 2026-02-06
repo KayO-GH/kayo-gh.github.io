@@ -147,6 +147,6 @@ The human experience, from social interactions, and even deeper, to the level of
 
 There's a value there that even babies can appreciate, but a supercomputer will not. Or, at least, not any time soon.
 
-The kids will be fine, as long as they maintain their humanity. I can _feel_ it... something AI can't do.
+The kids will be fine, as long as we maintain our humanity. I can _feel_ it... something AI can't do.
 
 ✌🏾😎
