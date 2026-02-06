@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Can't Show You The Time... A Lesson in Bias"
-date: 2026-01-29
+date: 2026-02-06
 comments: true
 ---
 
