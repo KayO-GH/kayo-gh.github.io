@@ -10,9 +10,9 @@ comments: true
 | Photo credit: ChatGPT 😅 |
 
 #### The Problem
-Apparently this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025 as a passing comment: generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
+Apparently, this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025, as a passing comment: generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
 
-This is strictly an image problem, which is why I used to word "show", not "tell", in the title of this post.
+This is strictly an image problem, which is why I used the word "show", not "tell", in the title of this post.
 
 Speaking of show and tell, allow me to show you an example of what I mean from everybody's favourite PhD-level thinker, ChatGPT.
 
@@ -84,11 +84,11 @@ The clock problem is funny. The rest... Dystopia maybe?
 
 ##### Of Dashes & Delves
 
-As a wirter, this section hits close to home.
+As a writer, this section hits close to home.
 
 We now live in a reality where good writing is quickly *suspected* of being AI-generated simply because of specific word choices or punctuation marks. The very things that used to signify thoughtful, well-crafted essays are now ChatGPT red flags.
 
-My favourite example is the em-dash (—), a perfectly legitimate punctuation mark that I have used, even when writing by hand, since high school. Today, use it a wee bit too much and your work may be tagged as robot-written AI slop.
+My favourite example is the em-dash (—), a perfectly legitimate punctuation mark that I have used, even when writing by hand, since high school. Today, use it a wee bit too much, and your work may be tagged as robot-written AI slop.
 
 A famous example is Paul Graham's beef with the word "delve". Paul G is a highly respected tech entrepreneur and writer, so his opinions tend to be very well regarded, but I think this is one instance where he was very wrong on the money, and confidence while wrong is a nasty combination.
 
@@ -109,22 +109,44 @@ I don't know where this ends. Should I start writing *worse* on purpose just to 
 
 Okay... so what?
 
-I don;t want to leave you depressed. You were hapving a perfectly good day before I came along with this post. Here's some hope for your time.
+I don't want to leave you depressed. You were having a perfectly good day before I came along with this post. Here's some hope for your time.
 
-Not too long ago I watched this YouTube short on [Sensory Linkages](https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb): the ability of the human brain to link different sensory modalities; in this case, sight and touch. How do you guess how something will feel, or even taste, just by looking at it?
+Not too long ago, I watched this YouTube short on [Sensory Linkages](https://youtube.com/shorts/hvv3lnseVY4?si=48N5OeTP2HKjYMXb): the ability of the human brain to link different sensory modalities; in this case, sight and touch. How do you guess how something will feel, or even taste, just by looking at it?
 
-The answer is that there are links that are built in a person's brain over time as we grow and develop between the differnt modalities. That's how you know what 'round' looks like, so you can guess how a ball will feel just by looking at it.
+The answer is that there are links that are built in a person's brain over time as we grow and develop between the different modalities. That's how you know what 'round' looks like, so you can guess how a ball will feel just by looking at it.
 
 The idea that AI has never tasted ice cream gives me comfort when it comes to the sanctity of the human experience. I've heard of electronic tasting, but there is just something about the human experience which AI and emerging technology have not captured, and in my opinion, will not capture, for a long time if at all.
 
-The fact that AI understands time and understands watches as two separate entities and cannot easily link the two concepts tells me something... ice cream is safe! 😂 ChatGPT knows ice cream is sweet, but how will it ever understand what exactly "sweet" means? Quick.. describe "sweet". "Like sugar", you say, or "Like honey". True, but ChatGPT has not tasted either of those things 😜. Yes, there's a chemistry to taste, and smell, and secialized hardware can probably be developed, but who really cares to have their computer smell roses with a USB-connected nose? It's such a human thing... safe from the machines.
+#### One Last Try
 
-The human experience; from social interactions and even deeper, to the level of the soul and spirit, if you will, with all the complexities of emotion, culture, and yes, taste, is what sets us apart from the robots.
+To make sure that I was not making a post that was no longer relevant, I attempted the experiment again today (in February 2026) but with clear instructions from the get-go.
 
-Theres a value there that even babies can appreciate, but a supercomputer will not.
+<img width="400px" alt="Screenshot 2026-02-06 at 17 06 55" src="https://github.com/user-attachments/assets/f34a7f19-7aac-4cef-b54a-14a752abd0f8" />
 
-AI could never. Or, at least, not any time soon.
+4:42 🤔... It's not 10 past 10, so we'll call it an improvement, I think... but it's also not 5:45. 
 
-The kids will be fine. I can _feel_ it... something AI can't do.
+<img width="412" height="544" alt="Screenshot 2026-02-06 at 17 17 40" src="https://github.com/user-attachments/assets/bcf90881-cc4d-41b4-b3e0-6b1394ee4e35" />
+
+SUCCESS! At last! 🥳
+
+However, this was never the original prompt. So I decided to try the original prompts one last time.
+
+<img width="400px" alt="Screenshot 2026-02-06 at 17 10 47" src="https://github.com/user-attachments/assets/bdf99ad6-7345-4793-b9a6-c0fd12d288db" />
+
+<img width="400px" alt="Screenshot 2026-02-06 at 17 11 03" src="https://github.com/user-attachments/assets/164778bc-9f3b-43c4-88fe-bcba8d6072c5" />
+
+...and we're back to square one, but I see a clear lesson, if we will learn anything from AI:
+
+It appears to me that bias is so baked in that the best chance at defeating it to any degree is to address it from the very start. Waiting to address bias later in the process can prove to be an uphill battle.
+
+#### Humanity
+
+The fact that AI understands time and watches as two separate entities and cannot easily link the two concepts tells me something... ice cream is safe! 😂 ChatGPT knows ice cream is sweet, but how will it ever understand what exactly "sweet" means? Quick.. describe "sweet". "Like sugar", you say, or "Like honey". True, but ChatGPT has not tasted either of those things 😜. Yes, there's a chemistry to taste, and smell, and secialized hardware can probably be developed, but who really cares to have their computer smell roses with a USB-connected nose? It's such a human thing... safe from the machines.
+
+The human experience, from social interactions, and even deeper, to the level of the soul and spirit, if you will, with all the complexities of emotion, culture, and yes, taste, is what sets us apart from the robots.
+
+There's a value there that even babies can appreciate, but a supercomputer will not. Or, at least, not any time soon.
+
+The kids will be fine, as long as they maintain their humanity. I can _feel_ it... something AI can't do.
 
 ✌🏾😎
