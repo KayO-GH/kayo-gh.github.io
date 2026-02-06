@@ -12,7 +12,7 @@ comments: true
 _Cross-posted on [LinkedIn](https://www.linkedin.com/pulse/ai-cant-show-you-time-lesson-bias-kwadwo-agyapon-ntra-jyw7e), [Medium](https://kayogh.medium.com/ai-cant-show-you-the-time-a-lesson-in-bias-98dfc1f7315b) and [My Tech Blog](https://kayo-gh.github.io/ai-cant-show-you-the-time/)._
 
 #### The Problem
-Apparently, this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025, as a passing comment (I think it was [Kevin Eloff](https://www.linkedin.com/in/kevin-eloff/)): generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
+Apparently, this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025, as a passing comment _(I think it was from [Kevin Eloff](https://www.linkedin.com/in/kevin-eloff/))_: generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
 
 This is strictly an image problem, which is why I used the word "show", not "tell", in the title of this post.
 
