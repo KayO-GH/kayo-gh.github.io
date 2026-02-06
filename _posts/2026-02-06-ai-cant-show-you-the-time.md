@@ -9,8 +9,10 @@ comments: true
 |:--:| 
 | Photo credit: ChatGPT 😅 |
 
+_Cross-posted on [LinkedIn](https://www.linkedin.com/pulse/ai-cant-show-you-time-lesson-bias-kwadwo-agyapon-ntra-jyw7e), Medium and [My Tech Blog](https://kayo-gh.github.io/ai-cant-show-you-the-time/)._
+
 #### The Problem
-Apparently, this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025, as a passing comment: generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
+Apparently, this is a thing that a lot of people already knew, but I heard it for the first time in August last year, on Day 1 of the Deep Learning Indaba 2025, as a passing comment (I think it was [Kevin Eloff](https://www.linkedin.com/in/kevin-eloff/)): generative AI models cannot (almost 100%) produce images of analogue clock faces with any time other than 10 minutes past 10.
 
 This is strictly an image problem, which is why I used the word "show", not "tell", in the title of this post.
 
@@ -119,7 +121,7 @@ The idea that AI has never tasted ice cream gives me comfort when it comes to th
 
 #### One Last Try
 
-To make sure that I was not making a post that was no longer relevant, I attempted the experiment again today (in February 2026) but with clear instructions from the get-go.
+To make sure that I was not making a post that was no longer relevant, I attempted the experiment again today (in February 2026), but with a specific time from the get-go.
 
 <img width="400px" alt="Screenshot 2026-02-06 at 17 06 55" src="https://github.com/user-attachments/assets/f34a7f19-7aac-4cef-b54a-14a752abd0f8" />
 
