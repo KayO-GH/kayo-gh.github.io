@@ -4,7 +4,7 @@ title: About
 ---
 
 ## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35px"/> Hi, I’m Kwadwo.   
-I’m a Data Scientist with an interest in AI/ML & a background in Software Engineering
+I’m a Senior Data Scientist with an interest in AI/ML & a background in Software Engineering
 
 <center>
   <img src="https://i.redd.it/8lfied3ohyp11.jpg" alt="reddit ML joke" width="500px" text/>
