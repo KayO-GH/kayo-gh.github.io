@@ -5,14 +5,153 @@ date: 2026-06-06
 comments: true
 ---
 
+<style>
+  .build-agent-post {
+    --agent-border: #d8dee9;
+    --agent-callout-bg: #f8fafc;
+    --agent-code-bg: #f6f8fa;
+    --agent-code-text: #1f2937;
+    --agent-code-border: #d0d7de;
+  }
+
+  .build-agent-post > img:first-child {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 2rem;
+    border-radius: 6px;
+  }
+
+  .build-agent-post .agent-callout,
+  .build-agent-post .agent-details {
+    margin: 1.25rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--agent-border);
+    border-left: 4px solid #4184e4;
+    border-radius: 6px;
+    background: var(--agent-callout-bg);
+  }
+
+  .build-agent-post .agent-callout p:first-child,
+  .build-agent-post .agent-details p:first-child {
+    margin-top: 0;
+  }
+
+  .build-agent-post .agent-callout p:last-child,
+  .build-agent-post .agent-details p:last-child {
+    margin-bottom: 0;
+  }
+
+  .build-agent-post .agent-callout.important {
+    border-left-color: #8957e5;
+  }
+
+  .build-agent-post .agent-callout.warning {
+    border-left-color: #d97706;
+  }
+
+  .build-agent-post .agent-callout.big-idea {
+    border-left-color: #16a34a;
+  }
+
+  .build-agent-post .agent-callout-title {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+  }
+
+  .build-agent-post .agent-details summary {
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .build-agent-post .highlight {
+    overflow-x: auto;
+    background: var(--agent-code-bg);
+    color: var(--agent-code-text);
+    border-color: var(--agent-code-border);
+    border-radius: 6px;
+  }
+
+  .build-agent-post .highlight pre,
+  .build-agent-post .highlight code {
+    color: inherit;
+  }
+
+  .build-agent-post :not(pre) > code {
+    padding: 0.1em 0.28em;
+    border-radius: 4px;
+    background: rgba(127, 127, 127, 0.14);
+  }
+
+  body.dark-mode .build-agent-post {
+    --agent-border: #475569;
+    --agent-callout-bg: #26313d;
+    --agent-code-bg: #0f172a;
+    --agent-code-text: #e5e7eb;
+    --agent-code-border: #334155;
+  }
+
+  body.dark-mode .build-agent-post blockquote {
+    color: #cbd5e1;
+    border-left-color: #64748b;
+  }
+
+  body.dark-mode .build-agent-post .highlight {
+    box-shadow: none;
+  }
+
+  body.dark-mode .build-agent-post .highlight .c,
+  body.dark-mode .build-agent-post .highlight .cm,
+  body.dark-mode .build-agent-post .highlight .c1,
+  body.dark-mode .build-agent-post .highlight .sb {
+    color: #94a3b8;
+  }
+
+  body.dark-mode .build-agent-post .highlight .k,
+  body.dark-mode .build-agent-post .highlight .kd,
+  body.dark-mode .build-agent-post .highlight .kn,
+  body.dark-mode .build-agent-post .highlight .kr,
+  body.dark-mode .build-agent-post .highlight .ow {
+    color: #93c5fd;
+  }
+
+  body.dark-mode .build-agent-post .highlight .s,
+  body.dark-mode .build-agent-post .highlight .s1,
+  body.dark-mode .build-agent-post .highlight .s2,
+  body.dark-mode .build-agent-post .highlight .mi,
+  body.dark-mode .build-agent-post .highlight .m {
+    color: #86efac;
+  }
+
+  body.dark-mode .build-agent-post .highlight .nf,
+  body.dark-mode .build-agent-post .highlight .nb,
+  body.dark-mode .build-agent-post .highlight .nv,
+  body.dark-mode .build-agent-post .highlight .nc {
+    color: #facc15;
+  }
+
+  body.dark-mode .build-agent-post .highlight .n,
+  body.dark-mode .build-agent-post .highlight .p,
+  body.dark-mode .build-agent-post .highlight .o {
+    color: #e5e7eb;
+  }
+</style>
+
+<div class="build-agent-post" markdown="1">
+
 <img width="1000" alt="build-an-agent-image" src="https://github.com/user-attachments/assets/af9ef205-ebd4-4577-bf8a-44ae9129499a" />
 
 # How to Build a Python AI Agent
 
->[!IMPORTANT]
->To follow along, [clone this repository](https://github.com/KayO-GH/build-an-agent).  
+<div class="agent-callout important" markdown="1">
+<span class="agent-callout-title">Follow along</span>
+Clone the [build-an-agent repository](https://github.com/KayO-GH/build-an-agent) before starting.
+</div>
 
-> This guide is inspired by [How to Build an Agent](https://ampcode.com/notes/how-to-build-an-agent) by Thorsten Ball. The original builds a code-editing agent in Go with Anthropic's Claude. This version rebuilds the same idea in Python (because it's more popular) with the HuggingFace Inference API (because it's virtually free to start) and grows the agent in small stages.
+<div class="agent-callout" markdown="1">
+This guide is inspired by [How to Build an Agent](https://ampcode.com/notes/how-to-build-an-agent) by Thorsten Ball. The original builds a code-editing agent in Go with Anthropic's Claude. This version rebuilds the same idea in Python (because it's more popular) with the HuggingFace Inference API (because it's virtually free to start) and grows the agent in small stages.
+</div>
 
 The point of this tutorial is to clearly show that an agent is an LLM, a loop, and some tools.
 
@@ -37,8 +176,10 @@ uv venv
 source .venv/bin/activate
 ```
 
-> [!NOTE]
-> We use uv for package management in this tutorial, but you can switch to `pip` or `conda` if necessary.
+<div class="agent-callout" markdown="1">
+<span class="agent-callout-title">Note</span>
+We use uv for package management in this tutorial, but you can switch to `pip` or `conda` if necessary.
+</div>
 
 Create a `.env` file and add a token from Hugging Face. _(here are [instructions for creating a token](https://huggingface.co/docs/hub/en/security-tokens))_:
 
@@ -246,44 +387,42 @@ def parse_tool_call(text):
 
 `ast` stands for abstract syntax tree. It lets us ask Python to parse the model's tool call as a real Python expression, then inspect the parsed structure.
 
->[!TIP]
-><details>
-><summary>Why use <code>ast</code> instead of other methods?</summary>
->
-> There are a few ways we could parse tool calls:
->
-> - Use regex or `text.split(",")`.
-> - Ask the model to return JSON.
-> - Use `eval(...)`.
-> - Use `ast.parse(...)` plus `ast.literal_eval(...)`.
->
-> Regex and comma-splitting look simple, but they break once arguments stop being simple. For example, this call has an empty string argument:
->
-> ```python
-> edit_file("mytxt", "", "hello")
-> ```
->
-> A naive parser can accidentally drop `""` and call `edit_file("mytxt", "hello")`, which crashes because `new_str` is missing. The `ast` parser preserves the actual arguments:
->
-> ```python
-> tool_name = "edit_file"
-> args = ["mytxt", "", "hello"]
-> ```
->
-> JSON is a good option too, and many production agents use structured tool calls instead of text parsing. But for this stage, Python-style calls are easier to read in the terminal:
->
-> ```python
-> read_file("agent-00.py")
-> ```
->
-> That format is also easy to parse with `ast`.
->
-> Do not use `eval(...)` here. The model output is untrusted text. `eval(...)` would execute that text as Python code. `ast.parse(...)` only parses the text into a tree, and `ast.literal_eval(...)` only extracts literal values like strings, numbers, lists, dictionaries, booleans, and `None`.
->
-> That is why this tutorial chooses `ast`: it keeps the friendly `tool_name("arg")` syntax while avoiding the most obvious parser bugs and the security risk of `eval`.
->
-> For more background, see the [official Python `ast` documentation](https://docs.python.org/3/library/ast.html) and this beginner-friendly guide to [`ast.parse` and `ast.literal_eval`](https://runebook.dev/en/docs/python/library/ast/ast.parse).
+<details class="agent-details" markdown="1">
+<summary>Why use <code>ast</code> instead of other methods?</summary>
 
+There are a few ways we could parse tool calls:
+
+- Use regex or `text.split(",")`.
+- Ask the model to return JSON.
+- Use `eval(...)`.
+- Use `ast.parse(...)` plus `ast.literal_eval(...)`.
+
+Regex and comma-splitting look simple, but they break once arguments stop being simple. For example, this call has an empty string argument:
+
+```python
+edit_file("mytxt", "", "hello")
+```
+
+A naive parser can accidentally drop `""` and call `edit_file("mytxt", "hello")`, which crashes because `new_str` is missing. The `ast` parser preserves the actual arguments:
+
+```python
+tool_name = "edit_file"
+args = ["mytxt", "", "hello"]
+```
+
+JSON is a good option too, and many production agents use structured tool calls instead of text parsing. But for this stage, Python-style calls are easier to read in the terminal:
+
+```python
+read_file("agent-00.py")
+```
+
+That format is also easy to parse with `ast`.
+
+Do not use `eval(...)` here. The model output is untrusted text. `eval(...)` would execute that text as Python code. `ast.parse(...)` only parses the text into a tree, and `ast.literal_eval(...)` only extracts literal values like strings, numbers, lists, dictionaries, booleans, and `None`.
+
+That is why this tutorial chooses `ast`: it keeps the friendly `tool_name("arg")` syntax while avoiding the most obvious parser bugs and the security risk of `eval`.
+
+For more background, see the [official Python `ast` documentation](https://docs.python.org/3/library/ast.html) and this beginner-friendly guide to [`ast.parse` and `ast.literal_eval`](https://runebook.dev/en/docs/python/library/ast/ast.parse).
 </details>
 
 <br/>
@@ -352,15 +491,18 @@ You can also try:
 You: Read the files in the test-files folder and tell me what they say.
 ```
 
-> [!WARNING]
-> `edit_file` can write to your working directory. That is useful, but it is also the first dangerous tool in this tutorial.
->
-> This version intentionally keeps the implementation small so you can see the moving pieces. A production agent should add guardrails:
-> - Restrict file access to a project root.
-> - Ask for confirmation before editing.
-> - Show diffs before writing.
-> - Log every tool call.
-> - Avoid giving the model arbitrary shell access until you have a permission model.
+<div class="agent-callout warning" markdown="1">
+<span class="agent-callout-title">Warning</span>
+`edit_file` can write to your working directory. That is useful, but it is also the first dangerous tool in this tutorial.
+
+This version intentionally keeps the implementation small so you can see the moving pieces. A production agent should add guardrails:
+
+- Restrict file access to a project root.
+- Ask for confirmation before editing.
+- Show diffs before writing.
+- Log every tool call.
+- Avoid giving the model arbitrary shell access until you have a permission model.
+</div>
 
 ---
 
@@ -470,10 +612,12 @@ The pattern is the same: give the model a capability, detect when it wants to us
 
 The quality depends on **the loop, the tool design, and the constraints** you put around what the agent is allowed to do.
 
->[!TIP] BIG IDEA
->What we have built here, while basic, is already more powerful than you think!  
->
-> Try `"Create a prime_number_generator.py"` and you will see that our little agent can already successfully generate code, and by extension, shell commands. This means it has the potential to be extended to control a computer and create any new functionality it needs!
+<div class="agent-callout big-idea" markdown="1">
+<span class="agent-callout-title">Big idea</span>
+What we have built here, while basic, is already more powerful than you think!
+
+Try `"Create a prime_number_generator.py"` and you will see that our little agent can already successfully generate code, and by extension, shell commands. This means it has the potential to be extended to control a computer and create any new functionality it needs!
+</div>
 
 If you prefer videos, here's one by Geoffrey Huntley, [building an agent live on stage!](https://www.youtube.com/watch?v=OR3zdu9T_as)
 
@@ -484,3 +628,5 @@ What will you build next?! 😃
 **Attribution:** This tutorial is based on the structure and ideas in [How to Build an Agent](https://ampcode.com/notes/how-to-build-an-agent) by Thorsten Ball. This Python version uses HuggingFace's OpenAI-compatible Inference API and staged examples instead of the original Go/Anthropic implementation.
 
 ✌🏾😎
+
+</div>
