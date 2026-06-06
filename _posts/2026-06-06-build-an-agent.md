@@ -5,6 +5,8 @@ date: 2026-06-06
 comments: true
 ---
 
+<img width="1536" height="1024" alt="build-an-agent-image" src="https://github.com/user-attachments/assets/af9ef205-ebd4-4577-bf8a-44ae9129499a" />
+
 # How to Build a Python AI Agent
 
 >[!IMPORTANT]
