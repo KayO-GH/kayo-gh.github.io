@@ -14,9 +14,11 @@ A programming language is just a tool. Use the right tool for the right job.
 If a person claims to be a carpenter, but only knows how to use a hammer, he/she might as well be Thor._
 
 ![](https://miro.medium.com/max/640/0*7RynF1H-V_z_b1ID.gif)
+<br/>
 *Cool huh?*
 
 ![](https://miro.medium.com/max/640/0*dOMZe2kHRVAZmOZw.gif)
+<br/>
 *You haven’t met this kind of problem yet.*
 
 Okay, enough comic humor.

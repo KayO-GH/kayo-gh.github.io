@@ -370,4 +370,140 @@ body.dark-mode .toggle-thumb {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
+
+/********************/
+/* POST COMPONENTS  */
+/********************/
+
+.post .entry {
+  --post-border: #d8dee9;
+  --post-callout-bg: #f8fafc;
+  --post-code-bg: #f6f8fa;
+  --post-code-text: #1f2937;
+  --post-code-border: #d0d7de;
+}
+
+.post .entry .post-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 2rem;
+  border-radius: 6px;
+}
+
+.post .entry .post-callout,
+.post .entry .post-details {
+  margin: 1.25rem 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--post-border);
+  border-left: 4px solid #4184e4;
+  border-radius: 6px;
+  background: var(--post-callout-bg);
+}
+
+.post .entry .post-callout p:first-child,
+.post .entry .post-details p:first-child {
+  margin-top: 0;
+}
+
+.post .entry .post-callout p:last-child,
+.post .entry .post-details p:last-child {
+  margin-bottom: 0;
+}
+
+.post .entry .post-callout.important {
+  border-left-color: #8957e5;
+}
+
+.post .entry .post-callout.warning {
+  border-left-color: #d97706;
+}
+
+.post .entry .post-callout.big-idea {
+  border-left-color: #16a34a;
+}
+
+.post .entry .post-callout-title {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.post .entry .post-details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.post .entry .highlight {
+  overflow-x: auto;
+  background: var(--post-code-bg);
+  color: var(--post-code-text);
+  border-color: var(--post-code-border);
+  border-radius: 6px;
+}
+
+.post .entry .highlight pre,
+.post .entry .highlight code {
+  color: inherit;
+}
+
+.post .entry :not(pre) > code {
+  padding: 0.1em 0.28em;
+  border-radius: 4px;
+  background: rgba(127, 127, 127, 0.14);
+}
+
+body.dark-mode .post .entry {
+  --post-border: #475569;
+  --post-callout-bg: #26313d;
+  --post-code-bg: #0f172a;
+  --post-code-text: #e5e7eb;
+  --post-code-border: #334155;
+}
+
+body.dark-mode .post .entry blockquote {
+  color: #cbd5e1;
+  border-left-color: #64748b;
+}
+
+body.dark-mode .post .entry .highlight {
+  box-shadow: none;
+}
+
+body.dark-mode .post .entry .highlight .c,
+body.dark-mode .post .entry .highlight .cm,
+body.dark-mode .post .entry .highlight .c1,
+body.dark-mode .post .entry .highlight .sb {
+  color: #94a3b8;
+}
+
+body.dark-mode .post .entry .highlight .k,
+body.dark-mode .post .entry .highlight .kd,
+body.dark-mode .post .entry .highlight .kn,
+body.dark-mode .post .entry .highlight .kr,
+body.dark-mode .post .entry .highlight .ow {
+  color: #93c5fd;
+}
+
+body.dark-mode .post .entry .highlight .s,
+body.dark-mode .post .entry .highlight .s1,
+body.dark-mode .post .entry .highlight .s2,
+body.dark-mode .post .entry .highlight .mi,
+body.dark-mode .post .entry .highlight .m {
+  color: #86efac;
+}
+
+body.dark-mode .post .entry .highlight .nf,
+body.dark-mode .post .entry .highlight .nb,
+body.dark-mode .post .entry .highlight .nv,
+body.dark-mode .post .entry .highlight .nc {
+  color: #facc15;
+}
+
+body.dark-mode .post .entry .highlight .n,
+body.dark-mode .post .entry .highlight .p,
+body.dark-mode .post .entry .highlight .o {
+  color: #e5e7eb;
+}
+
 @import "svg-icons";
