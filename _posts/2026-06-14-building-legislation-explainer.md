@@ -19,34 +19,31 @@ During an online townhall-style meeting with the minister responsible, I offered
 
 So yeah, I built it... a tool for regular people to drop in a piece of legislation and get a summary with explanations of how it affects us. It also allows you to ask follow-up questions.
 
+<img alt="screenshot" src="https://github.com/user-attachments/assets/066210b4-05bf-4dc4-9ea2-5679912c53d0" />
 
+## Version 1 - Qwen3-32B + Structure
 
-So the idea for Legislation Explainer was simple: what if a normal person could drop in a bill and quickly get a readable first-pass explanation of what it says, who it affects, what obligations it creates, and what questions they should be asking next?
+The earliest commits were the obvious scaffolding work: project config, a Gradio app, ingestion for PDFs/DOCX/text/URLs, and a RAG pipeline using the largest Qwen model that barely met the hackathon requirements of staying under 32B parameters.
 
-Not an AI lawyer. Not a replacement for policy experts. Just a small-model assistant that makes the first reading less painful.
-
-## The First Version Was Really About Shape
-
-The earliest commits were the obvious scaffolding work: project config, a Gradio app, ingestion for PDFs/DOCX/text/URLs, and a RAG pipeline. That sounds neat in hindsight, but the most important decision was not the model or the vector store. It was the shape of the output.
-
-I did not want a chatbot that says, "Ask me anything about this bill." That is too vague. If the user does not already understand the bill, they may not even know what to ask.
-
-So the app generates a structured brief first:
+The structured brief was set up as follows:
 
 - an executive summary
 - a plain-language bill summary
 - implementation implications
 - critique and recommendations
 - SWOT analysis
-- follow-up Q&A
 
-That structure matters. It gives the user handles. A journalist can scan the critique. A founder can jump to obligations and risks. A student can read the summary first. A civic group can use the SWOT as a discussion starter.
+And after the summary, an attached chat interface for follow-up Q&A
 
-One thing I learned here is that for public-interest tools, "summarize this" is usually not enough. The real product is the set of questions you force the system to answer.
+Simple and sweet... until I put it out and found out some people didn't care for the summary, they just wanted to ask questions, and that broke the flow. 🤦🏾‍♂️
 
-## The Demo Had To Be Instant
+## Version 2 - Qwen3-14B + Embeddings + Decoupling
 
-At first, the app leaned more heavily on live document fetching and retrieval. That is fine when you are developing locally with patience and good internet. It is less fine when you are trying to demo a hackathon app and the public PDF source decides to be slow, unavailable, or just weird.
+So it turns out small models are really capable, and I could have gone way lower than 14B, but since it's a legal government doc and I wanted to preserve reasoning, I dropped to Qwen3-14B and stuck there for a balance between size and capability. 
+
+The app leaned on full document scans at this point, which is great for context, but can get slow, so we had to go the traditional embeddings chunking route. 
+
+more heavily on live document fetching and retrieval. That is fine when you are developing locally with patience and good internet. It is less fine when you are trying to demo a hackathon app and the public PDF source decides to be slow, unavailable, or just weird.
 
 The commit history tells the story pretty clearly. I added bundled example bills, then precomputed analysis assets, then rebuilt the precomputed retrieval path so it no longer depended on committed FAISS indexes.
 
