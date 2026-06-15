@@ -7,15 +7,19 @@ comments: true
 
 <img class="post-hero" width="1000" alt="Landscape screenshot of the Legislation Explainer Gradio app" src="/images/building-legislation-explainer.jpg" />
 
-# Building Legislation Explainer
+# Building Legislation Explainer (Build Small Hackathon)
 
 This project started from a very Ghanaian kind of panic.
 
-In May 2026, a draft NITA bill started making the rounds on Ghanaian X. The reaction from the tech community was not exactly calm. There were concerns about licensing fees, taxes on revenue, restrictions around foreign co-founders, and a general feeling that something important had been sitting in plain sight while most of us were busy living our lives.
+In May 2026, a [draft NITA bill](https://nita.gov.gh/wp-content/uploads/2025/NITA-2008-act-2025-1.pdf) started making the rounds on Ghanaian X. The reaction from the tech community was not exactly calm. There were concerns about licensing fees, taxes on revenue, restrictions around foreign co-founders, and a general feeling that something important had been sitting in plain sight while most of us were busy living our lives.
 
-That last part bothered me the most.
+It bothered me even more when I found out that the bill had not been public for months before we all had a collective panic attack. But it was a long dense legal document written in the kind of language that puts people like me to sleep. 😅
 
-The bill had not been hidden in a bunker somewhere. It was public. But it was also a long legal document written in the kind of language that makes ordinary people quietly close the PDF and say, "I will read it later." Later, of course, is where civic participation goes to die. 😅
+During an online townhall-style meeting with the minister responsible, I offered to build a tool to help people like me figure out these kinds of docs... I mean, it's basically just RAG. Nobody took me up on it, but not long afterwards,the good folks at Hugging Face 🤗 and Gradio came along with the Build Small Hackathon (and precious credits 😋).
+
+So yeah, I built it... a tool for regular people to drop in a piece of legislation and get a summary with explanations of how it affects us. It also allows you to ask follow-up questions.
+
+
 
 So the idea for Legislation Explainer was simple: what if a normal person could drop in a bill and quickly get a readable first-pass explanation of what it says, who it affects, what obligations it creates, and what questions they should be asking next?
 
