@@ -103,4 +103,6 @@ For now, I am happy with the lessons and the progress... the most useful AI app 
 And for public legislation, that feels like a pretty good place to start.  
 ✌🏾😎
 
-App available here: <https://huggingface.co/spaces/build-small-hackathon/legislation-explainer>
+---
+
+_App available here: <https://huggingface.co/spaces/build-small-hackathon/legislation-explainer>_
