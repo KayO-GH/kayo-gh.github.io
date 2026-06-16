@@ -34,30 +34,37 @@ That last part was important. I did not want a toy that only works while the bro
 
 This is one of the biggest lessons from the project: for learning tools, the artifact matters.
 
-A nice response on screen is fine. A ZIP file with MP3 tracks, a sentence table, verbs to review, and a routine is better. It turns the model output into something you can actually use on a walk, in a trotro, at the gym, or while pretending you are about to become fluent this week. 😄
+A nice response on screen is fine. A ZIP file with audio tracks, a sentence table, verbs to review, and a routine is better. It turns the model output into something you can actually use on a walk, in a trotro, at the gym, or while pretending you are about to become fluent this week. 😄
 
-## Audio Changed Everything
+## Lessons
 
-The first audio packaging idea was too granular: one sentence per audio file. That sounded organized, but it would have been annoying in real life. Who wants a folder full of tiny clips?
+### Audio Gotchas
 
-So the app moved to tracks of up to 20 sentences. Later, generated files switched from WAV to MP3 for better phone compatibility. That sounds like a boring file-format change, but it is exactly the kind of thing that decides whether a tool survives contact with real users.
+- The first audio packaging idea was too granular: one sentence per audio file. That sounded organized, but it would have been annoying in real life. Nobody wants a folder full of 10-second clips? So switched to tracks of up to 20 sentences. 
 
-Phones like MP3. People share MP3. Audio players understand MP3. So MP3 it is.
+- The second issue was the text-to-speech voices. An English TTS model reading French is the funniest thing you will ever hear. When I heard the model pronouce "je vais" as "je va-ees" I knew we had a problem 😂. Fortunately, with some Googling and after sending Codex off to do some research, we finally found a shortlist of good TTS models for a subset of the languages I was considering.
 
-The audio work also led to a long chain of practical questions:
+- The third issue was the audio file formats. We started out with WAV audio files, and it ran fine until I tried to share my study pack with an aspiring polyglot like myself. I couldn't send it, even though I could play it. It turns out phones like MP3. People share MP3. Audio players understand MP3. WAV, apparently, is very yesterday... and so we had to throw in MP3 to WAV conversion.
+
+### Text-to-Speech on Modal
+
+The audio work led to a chain of practical questions of two kinds:
+
+#### Sentence generation
 
 - should there be a break between sentences?
 - how slow should shadowing audio be?
 - should we slow down speech itself or just add padding?
-- how much work should happen on Modal?
+
+#### Platform considerations
+
+- can the workload live on Hugging Face or is it time to bring in [Modal](https://modal.com/)? (Spoiler alert, it was)
 - can cold start begin when the page opens?
 - should audio generation be split across workers?
 
-This was where LingoShadow stopped being just an LLM wrapper.
+The app needed a TTS service, backend routing, warmup behavior, progress feedback, and failure handling. The final stack routes target languages to different TTS models: Kyutai for English/French, MMS for German, and Kokoro for Spanish, Italian, Portuguese, and Japanese. 😫
 
-The app needed a TTS service, backend routing, warmup behavior, progress feedback, and failure handling. The final stack routes target languages to different TTS models: Kyutai for English/French, MMS for German, and Kokoro for Spanish, Italian, Portuguese, and Japanese.
-
-That is a lot more interesting than a dropdown. A language dropdown is just the user interface. The real product decision is what happens behind each option.
+Behind the language selection dropdown buttons, many routing decisions were taking place with anticipation for what a user would do next, in oreder to minimize system latency.
 
 ## Multilingual Is A Routing Problem
 
