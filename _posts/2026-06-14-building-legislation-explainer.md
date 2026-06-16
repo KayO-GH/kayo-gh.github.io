@@ -19,7 +19,7 @@ During an online townhall-style meeting with the minister responsible, I offered
 
 So yeah, I built it... a tool for regular people to drop in a piece of legislation and get a summary with explanations of how it affects us. It also allows you to ask follow-up questions.
 
-<img alt="screenshot" src="https://github.com/user-attachments/assets/066210b4-05bf-4dc4-9ea2-5679912c53d0" />
+<img alt="screenshot" width="400" src="https://github.com/user-attachments/assets/066210b4-05bf-4dc4-9ea2-5679912c53d0" />
 
 ## Version 1 - Qwen3-32B + Structure
 
@@ -37,27 +37,19 @@ And after the summary, an attached chat interface for follow-up Q&A
 
 Simple and sweet... until I put it out and found out some people didn't care for the summary, they just wanted to ask questions, and that broke the flow. 🤦🏾‍♂️
 
-## Version 2 - Qwen3-14B + Embeddings + Decoupling
+## Version 2 - Qwen3-14B + Embeddings
 
-So it turns out small models are really capable, and I could have gone way lower than 14B, but since it's a legal government doc and I wanted to preserve reasoning, I dropped to Qwen3-14B and stuck there for a balance between size and capability. 
+So it turns out small models are really capable, and I could have gone way lower than 14B, but since it's a legal government doc and I wanted to preserve reasoning, I dropped to Qwen3-14B and stuck there for a balance between size and capability.
 
-The app leaned on full document scans at this point, which is great for context, but can get slow, so we had to go the traditional embeddings chunking route. 
-
-more heavily on live document fetching and retrieval. That is fine when you are developing locally with patience and good internet. It is less fine when you are trying to demo a hackathon app and the public PDF source decides to be slow, unavailable, or just weird.
-
-The commit history tells the story pretty clearly. I added bundled example bills, then precomputed analysis assets, then rebuilt the precomputed retrieval path so it no longer depended on committed FAISS indexes.
-
-That last part was a funny little lesson.
-
-Hugging Face rejected a push because the repo contained binary FAISS index files. The files were not even huge. The issue was the storage policy around binaries. So I changed the app to keep the useful human-readable artifacts in Git (`analysis.json`, `chunks.json`, `document.txt`, `metadata.json`) and rebuild retrieval from chunks when needed.
+The app leaned on full document scans at this point, which is great for context, but can get slow, so we had to go the traditional embeddings chunking route. Enter sentence-transformers/all-MiniLM-L6-v2 and FAISS for indexing, and a bunch of git errors because the repo contained binary FAISS index files. The files were not even huge 😒. The issue is GitHub's storage policy around binaries. So we (Codex and I) changed the app to keep the useful human-readable artifacts in Git (`analysis.json`, `chunks.json`, `document.txt`, `metadata.json`) and rebuild retrieval from chunks when needed.
 
 That was a better architecture anyway.
 
 It made the demo more reliable, kept the repository cleaner, and forced me to separate what needed to be precomputed from what could be rebuilt. The app became less magical and more inspectable. I like that.
 
-## Streaming Was Not As Simple As I Wanted
+## Version 3 - Streaming Text can be tough
 
-At some point I wanted the app to feel more alive.
+At this point the app felt laggy, if that's a word, so I wanted the thing where the model writes to the screen one character at a time. You know, that typewriter effect.
 
 The obvious request was: can the executive summary and bill summary stream into the page as the model writes them? In normal chat apps, streaming is straightforward enough. In this app, the main analysis flow depends on structured outputs. The model is not just writing a paragraph; it is producing content that has to be parsed, validated, and rendered into sections and tables.
 
@@ -68,59 +60,50 @@ That led to a useful distinction:
 
 For the Q&A flow, I could make the answer appear incrementally in the chatbot without changing the entire architecture. For the structured analysis, true streaming would have meant splitting some sections into plain-text calls, streaming those, then separately validating the final structured object.
 
-I did not take that whole detour during the hackathon. Instead, I made smaller UX improvements: better progress states, rerun controls, source resets, queued question handling, stop buttons, and responsive layouts.
+I could see the headache coming a mile away... swerve! Not worth the headache for an MVP 😅. I focused my energy on smaller UX improvements which added up to better gains overall: better progress states, rerun controls, source resets, queued question handling, stop buttons, and responsive layouts.
 
 This was one of those moments where the boring product work mattered more than the shiny technical ambition. A stop button can be more useful than a clever stream.
 
-## The Model Stack Became A Product Constraint
+Oh, this is also where we decoupled the Q&A chat from the summary, so that one didn't have to depend on the other.
 
-The hackathon was Build Small, so the model constraint was not a footnote. It shaped the project.
+## Model Constraints - Keep it Simple
 
-The shipped path uses `Qwen/Qwen3-14B` through the Hugging Face router, with `sentence-transformers/all-MiniLM-L6-v2` for local embeddings. I also explored provider flexibility and even a Modal/Nemotron direction, but the repo eventually came back to the simpler Qwen path.
+The hackathon was Build Small, so the model constraint shaped the project.
 
-That reversal was a good lesson.
-
-There is always a temptation to make the app more flexible: bring your own provider, more model choices, more infrastructure options, more switches. But for a hackathon demo, flexibility can become noise. The user does not care that the app can theoretically talk to five providers if the one path they need is not reliable.
-
-So the public app became more opinionated:
+There is always a temptation to make the app more flexible: bring your own provider, more model choices, more infrastructure options, more switches. But for a hackathon demo, flexibility usually becomes noise. We need a good demo, and nothing more if we can help it, so the public app became more opinionated:
 
 - one primary generation path
 - clear model disclosure
 - examples that load quickly
 - Q&A grounded in the full document
-- no public-facing provider settings that distract from the civic use case
+- totally dropped a bring-your-own-model idea I had been toying with
 
-Small models make you choose. That is annoying, but it is also healthy.
+Small models make you choose. It';'s like finding a spouse... you choose just one 😂.
 
-## Codex Was Good At The Churn
+## Codex - My New Friend
 
-A lot of the progress on this project came from very practical Codex sessions: creating commits in sensible order, pushing to GitHub, connecting the Space remote, cleaning rewritten history, explaining why a Hugging Face push failed, and testing the UI in Chrome.
+This was my first time using Codex extensively. Connecting from my phone for remote sessions was such a productivity hack! I learnt from a video once that I could set things up so that the agent would work and verify its output with screenshots before I check, feature by feature. If the screenshot looks wrong, I send Codex back to work it out before I bother to spend my precious time reviewing. I think this is my new workflow for side gigs moving forward 🙌🏾.
 
-The best use of Codex was not "build the whole thing while I disappear." It was more like having a fast pair programmer for the churny middle of the project.
+A lot of the progress on this project came from very practical Codex sessions: creating commits in sensible order, pushing to GitHub, connecting the Space remote, cleaning rewritten history, explaining why something failed, and testing the UI in Chrome.
 
-The chats show the project getting corrected in small ways:
+The future really is agentic!
 
-- rename the project so it is about legislation, not just one bill
-- hide future provider settings from the public app
-- make supporting snippets collapsible
-- answer follow-up questions from the full document, not only the summary
-- move buttons around until the UI felt less awkward
-- remove binary artifacts from history before pushing to the Space
+## Takeaways
 
-None of those steps is glamorous. Together, they are the difference between a prototype and something I can actually show someone.
+1. this is non-technical, but just from feedback, people will rally around a solution that addresses real pain points.
+2. Small models can do a lot! Not every problem requires an OpenAI, Anthropic or Google solution.
+3. The different inference providers in HuggingFace come with diffrent perks... some are cheaper, some are faster, but they are there! Before starting on this, I had not realised the variety that was available.
+4. Various git platforms can get iffy over binaries. Read docs!
+5. UIs that can be visually verified by an agent with a browser tool is how to develop for the frontend moving forward.
 
-## What I Learned
+I had one suggestion to add an audio naration so people can listen to a plain-language brief while commuting. Sounds cool doesn't it? I just didn't have the time, unfortunately.
 
-The biggest lesson is that civic AI tools need humility.
+For now, I am happy with the lessons and the progress... the most useful AI app is not the one that answers everything, in this case, it is the one that helps people start reading what already affects them.
 
-A model can help summarize a bill, but the dangerous part is pretending that summarization is understanding. Legislation is about power, obligations, money, enforcement, loopholes, and the people who will be affected when the document stops being a PDF and starts being policy.
+And for public legislation, that feels like a pretty good place to start.  
+✌🏾😎
 
-So the app has to keep inviting questions. It has to show sources. It has to make the user more curious, not more passive.
+App available here: https://huggingface.co/spaces/build-small-hackathon/legislation-explainer
 
-I also learned that demo reliability is a feature. Precomputed examples, clean deployment metadata, no binary surprises in Git, and a UI that can be visually verified are not side quests. They are part of the product.
-
-If I keep working on Legislation Explainer, I would improve citation quality, add better clause-level source linking, test it with more civic groups, and maybe bring back audio summaries in a careful way. I still like the idea of letting someone listen to a plain-language brief while commuting.
-
-For now, I am happy with the lesson: sometimes the most useful AI app is not the one that answers everything. It is the one that helps people start reading what already affects them.
-
-And for public legislation, that feels like a pretty good place to start. ✌🏾
+Demo video here:
+<div style="position: relative; padding-bottom: 64.98194945848375%; height: 0;"><iframe src="https://www.loom.com/embed/ed7b682ab6774d5499fca4c06c290bfc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
