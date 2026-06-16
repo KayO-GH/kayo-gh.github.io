@@ -9,15 +9,15 @@ comments: true
 
 # Building LingoShadow
 
-LingoShadow started with a learning itch.
+I built version one of this app from the gym wiht my buddy, Codex. It's really a different world for software development now. 😅
 
-I had been watching videos about language learning, shadowing, and the idea that you can get surprisingly far by practicing the sentences you are actually likely to say. Not random textbook sentences. Not "the apple is red" energy. The stuff you need when you are buying groceries, talking to a neighbor, ordering food, asking for directions, explaining your schedule, or trying not to look completely lost in another country.
+Anyway, I had been watching videos about language learning, shadowing, and the idea that you can get surprisingly far by practicing the sentences you are actually likely to say. Not random textbook sentences... that's how we all learnt to speak as children, isn't it? We repeated the phrases we heard in the contexts we were growing up in.
 
-So the first prompt to Codex was basically: let's make a Gradio app where I describe my normal life, choose a target language, and get useful sentences plus audio.
+So the first prompt to Codex was basically: let's make a Gradio app where I describe my normal life, choose a target language, and get useful sentences plus audio... and then I passed codex some of the links to the videos I had watched so it would figure out more context from the transcripts. With an agentic coding assistant, whenever possible, show, don't just tell!
 
-Default to French, of course. Ghanaian school trauma must count for something. 😅
+The default language would be French, of course, since that's the only international language apart from English for which I can hope to catch a translation model in a lie. 😅
 
-The product idea became LingoShadow: a daily language practice app that turns your real routines into a small study pack.
+And that's how LingoShadow was born: a daily language practice app that turns your real routines into a small study pack.
 
 ## The Core Idea Was Not The Model
 
