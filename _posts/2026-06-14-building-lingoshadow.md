@@ -56,7 +56,7 @@ The audio work led to a chain of practical questions of two kinds:
 - how slow should shadowing audio be?
 - should we slow down speech itself or just add padding?
 
-#### Platform considerations
+#### Platform & architecture considerations
 
 - can the workload live on Hugging Face or is it time to bring in [Modal](https://modal.com/)? (Spoiler alert, it was)
 - can cold start begin when the page opens?
@@ -64,9 +64,9 @@ The audio work led to a chain of practical questions of two kinds:
 
 The app needed a TTS service, backend routing, warmup behavior, progress feedback, and failure handling. The final stack routes target languages to different TTS models: Kyutai for English/French, MMS for German, and Kokoro for Spanish, Italian, Portuguese, and Japanese. 😫
 
-Behind the language selection dropdown buttons, many routing decisions were taking place with anticipation for what a user would do next, in oreder to minimize system latency.
+Behind the language selection dropdown buttons, many routing decisions were taking place with anticipation for what a user would do next, in order to minimize system latency.
 
-## Multilingual Is A Routing Problem
+### Multilingual Is A Routing Problem
 
 Early on, it would have been easy to pretend one model could do everything well enough. But language apps punish vague thinking.
 
@@ -78,36 +78,13 @@ So LingoShadow ended up with a small-model stack rather than a single magic mode
 - `CohereLabs/tiny-aya-global` for translation
 - language-specific TTS backends for audio
 
-Each individual model stays comfortably under the hackathon limit, and the app discloses the stack instead of hiding it.
+Each individual model stays comfortably under the hackathon limit, and we disclose the stack in the app.
 
-One of the funniest little lessons was from the model stack copy itself. At one point there was a weird "Hugo the Frenchie" style artifact in the app copy, which led to the obvious question: where did that come from? The answer was basically: from placeholder/demo language being allowed to hang around too long.
+### Progress Feedback
 
-Tiny copy mistakes are not tiny when they appear in a model disclosure section. They make the whole app feel less serious. So the model stack moved into the README, and the rendered app focused more on the learner experience.
+Nobody likes to click on a button and wonder whether something is happening or the page is hanging.
 
-Good call.
-
-## The UI Had To Feel Like Learning
-
-The first functional app worked, but it did not feel especially like a language learning app. Then came the bright-theme pass.
-
-This is where the project became more itself: flags, a cheerful hero section, warmer colors, clearer cards, and a layout that made the app feel less like a form and more like a study studio.
-
-I went back and forth on contrast a few times. Some labels looked fun but not readable enough. Some badges were too loud. Some sections had too much visual weight. The commit history has a whole little story of brightening the app, then fixing contrast, then restoring some badges, then polishing the layout again.
-
-That taught me something I keep relearning: visual design is not decoration after the fact. It changes how understandable the workflow feels.
-
-For LingoShadow, the UI needed to say:
-
-- this is practical
-- this is friendly
-- this will give you something downloadable
-- you do not need to understand the model stack to begin
-
-That is why the first screen became the actual app experience, not a marketing page. Describe your world, choose your language, build the pack. Done.
-
-## Progress Feedback Was Not Optional
-
-Study-pack generation takes time. The app may be calling a generation model, translating, building audio, zipping files, and waiting on a remote TTS service. If the UI just sits there, people assume it is broken.
+Since study-pack generation takes time, workign through multiple stages of calling a generation model, translating, building audio, zipping files, and waiting on a remote TTS service, if the UI just sits there, people assume it is broken.
 
 So progress feedback became a real feature:
 
@@ -118,39 +95,23 @@ So progress feedback became a real feature:
 - add timestamped download names
 - make the maximum sentence count sane for mobile use
 
-The timestamped filenames were another tiny but useful change. A downloaded `daily_language_pack.zip` is fine once. After the third build, it becomes a mess. A file like `daily_language_pack_20260614_214438.zip` is boring in the best possible way.
-
 Boring wins a lot in software.
 
-## Codex Was Useful, But The User Feedback Mattered More
+### Mobile Responsiveness
 
-Looking through the Codex chats, the app improved most when the requests were concrete:
+In the good old days of writing code by hand, when you had a problem with mobile views, you sat down with CSS media queries and fought with different padding levels and margins until you wanted to cry. Oh, the joys of trying to center a button. 😄🥲
 
-- "It should not be one sentence per audio file. I want 20 sentences per audio file."
-- "The audio files should be MP3 for phones."
-- "The app is slow on mobile."
-- "The section titles do not have enough contrast."
-- "I want a motivation button."
-- "Any audio or ZIP file downloaded should end with a timestamp."
+Today, you tell your agent "Look at the mobile view in chrome and work out all the kinks". Actually, you should be able to write a better prompt than that to get it in one shot, but it's the same idea: not your job.
 
-That is the good stuff.
+That's all I'm going to say here. God bless coding agents.
 
-A model can generate a lot of code, but the product direction came from noticing friction. Too many files. Wrong format. Slow mobile flow. Weak contrast. Confusing model disclosure. Each complaint made the app more real.
+## Conclusion
 
-The motivation panel is a good example. Embedding the video directly would have been heavy and distracting. A small expandable explanation fit better. People who care can open it. Everyone else can keep building their study pack.
+This app has been my favourite side project in a long while. I'm actually going to be using it.
 
-## What I Learned
+Like, I built something that speaks Japanese in one weekend. I'll call it... the future is here.
 
-The main lesson is that language learning apps should start from the learner's life, not from the model's capabilities.
+✌🏾😎
 
-The model can produce sentences all day. That is not the hard part. The hard part is making those sentences likely to matter tomorrow morning.
-
-I also learned that audio is not an export option. In a shadowing app, audio is the product. The track length, file format, pacing, warmup, packaging, and download names all matter because they decide whether practice actually happens outside the browser.
-
-And finally, I learned that small models are more than enough when the task is shaped properly. LingoShadow does not need a giant frontier model to ask about your day, generate practical phrases, translate them, and package audio drills. It needs a focused workflow and honest constraints.
-
-If I keep going, I would add spaced repetition, learner feedback, better pronunciation support, and maybe a way to regenerate only the weak parts of a pack instead of rebuilding everything.
-
-For now, the app does what I wanted at the start: it turns "I want to learn French for my actual life" into something I can listen to.
-
-That feels small in the good way. ✌🏾
+---
+You can try LingoShadow out here: <https://huggingface.co/spaces/build-small-hackathon/lingo-shadow-daily-language-practice>
