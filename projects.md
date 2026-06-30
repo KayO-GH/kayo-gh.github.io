@@ -4,6 +4,19 @@ title: Projects
 permalink: /projects/
 ---
 
+### Maverick IMDB Auto-Fill
+
+<img width="800" alt="Screenshot of the IMDB Auto-Fill Streamlit app" src="https://raw.githubusercontent.com/KayO-GH/GDSS_CV_OCR/main/docs/screenshots/chrome-initial-load.png" />
+
+A Streamlit app that turns product imagery into Item Master Database submissions. It groups images by product evidence, runs multimodal extraction and barcode scanning, normalizes fields, supports human review and duplicate handling, and exports CSV or Excel files. (Built for the GDSS-Maverick Hackathon at IndabaX Ghana 2026.)
+
+![](https://img.shields.io/badge/Python-white?logo=Python) ![](https://img.shields.io/badge/Streamlit-white?logo=Streamlit) ![](https://img.shields.io/badge/Cohere-white?logo=Cohere) ![](https://img.shields.io/badge/OpenAI-white?logo=OpenAI) ![](https://img.shields.io/badge/🤗%20HuggingFace_Spaces-white?logo=huggingface)
+
+[Live Streamlit App](https://gdsscvocr.streamlit.app/) | [GitHub Repo](https://github.com/KayO-GH/GDSS_CV_OCR)
+
+---
+<br/>
+
 ### LingoShadow
 
 <img width="800" alt="Screenshot of the LingoShadow Gradio app" src="/images/building-lingoshadow.jpg" />
