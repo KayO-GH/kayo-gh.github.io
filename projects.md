@@ -4,6 +4,32 @@ title: Projects
 permalink: /projects/
 ---
 
+### LingoShadow
+
+<img width="800" alt="Screenshot of the LingoShadow Gradio app" src="/images/building-lingoshadow.jpg" />
+
+A daily language practice app that turns your real routines into useful target-language sentences, audio, and a downloadable study pack. Built during the Build Small Hackathon as a Gradio app with language-specific routing for generation, translation, and text-to-speech.
+
+![](https://img.shields.io/badge/Python-white?logo=Python) ![](https://img.shields.io/badge/Gradio-white?logo=Gradio) ![](https://img.shields.io/badge/Modal-white?logo=Modal) ![](https://img.shields.io/badge/🤗%20HuggingFace_Spaces-white?logo=huggingface)
+
+[Hugging Face Space](https://huggingface.co/spaces/build-small-hackathon/lingo-shadow-daily-language-practice)
+
+---
+<br/>
+
+### Legislation Explainer
+
+<img width="800" alt="Screenshot of the Legislation Explainer Gradio app" src="/images/building-legislation-explainer.jpg" />
+
+A plain-language legislation assistant that summarizes dense bills, explains their practical impact, and supports follow-up questions. Built for the Build Small Hackathon to help regular people make sense of legal documents without needing to parse the whole thing themselves.
+
+![](https://img.shields.io/badge/Python-white?logo=Python) ![](https://img.shields.io/badge/Gradio-white?logo=Gradio) ![](https://img.shields.io/badge/FAISS-white?logo=FAISS) ![](https://img.shields.io/badge/🤗%20HuggingFace_Spaces-white?logo=huggingface)
+
+[Hugging Face Space](https://huggingface.co/spaces/build-small-hackathon/legislation-explainer)
+
+---
+<br/>
+
 ### Africa Youth Employment Clock
 
 <img width="800" alt="Screenshot 2024-08-12 at 18 15 13" src="https://github.com/user-attachments/assets/34af352e-c23e-458d-a4fb-500f9d7a191d">
