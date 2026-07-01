@@ -12,7 +12,8 @@ A Streamlit app that turns product imagery into Item Master Database submissions
 
 ![](https://img.shields.io/badge/Python-white?logo=Python) ![](https://img.shields.io/badge/Streamlit-white?logo=Streamlit) ![](https://img.shields.io/badge/Cohere-white?logo=Cohere) ![](https://img.shields.io/badge/OpenAI-white?logo=OpenAI) ![](https://img.shields.io/badge/🤗%20HuggingFace_Spaces-white?logo=huggingface)
 
-[Live Streamlit App](https://gdsscvocr.streamlit.app/) | [GitHub Repo](https://github.com/KayO-GH/GDSS_CV_OCR)
+[Live Streamlit App](https://gdsscvocr.streamlit.app/)  
+[GitHub Repo](https://github.com/KayO-GH/GDSS_CV_OCR)
 
 ---
 <br/>
