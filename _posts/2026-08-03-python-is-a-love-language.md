@@ -98,6 +98,8 @@ Then I went to DjangoCon Africa in Zanzibar. I met old friends, made new ones, g
 
 Apparently, community flames are not as easy to put out as I thought. You just need to touch wicks with someone and boom, you are back on fire. 🔥
 
+Since then, I helped start Python Rwanda, and I'm back to serving with Python Ghana since I moved back home.
+
 ### But AI Writes Code Now, Right?
 
 Right. And that is exactly why I think Python is still worth learning.
