@@ -72,7 +72,10 @@ Python asks you to care about what the code says, not only what the computer wil
 
 The reason I've stuck with Python as my go-to language for something like a decade now has much less to do with `print()` and much more to do with people.
 
-<img class="post-hero" width="1000" alt="Django Girls Hohoe participants and coaches learning together" src="https://miro.medium.com/v2/resize:fit:1400/0*iQrHcXIv5vp95e1e.jpg" />
+<figure class="post-figure">
+  <img class="post-hero" width="1000" alt="Django Girls Hohoe participants and coaches learning together" src="https://miro.medium.com/v2/resize:fit:1400/0*iQrHcXIv5vp95e1e.jpg" />
+  <figcaption>Django Girls Hohoe - 2018</figcaption>
+</figure>
 
 Python took me into the Django Girls community, first in Accra and then in Hohoe. I got to sit with women who were learning to code for the first time, work through the basics of Python and Django with them, and watch them build their own blogs. No one becomes a developer in a day, but a day can be enough to show someone that programming is not a closed club.
 
@@ -84,9 +87,12 @@ Along the way, Python gave me rooms to learn in and rooms to speak in: DevFest, 
 
 ### Finding The Flame Again
 
-COVID. A lot of those rooms disappeared. Like many people, I got busy surviving, studying, and trying to keep the different pieces of life from falling off the table. Community felt like something I had done in a previous life.
+COVID. A lot of those rooms disappeared. Like many people, I got busy surviving, studying, and eventually ended up in grad school. Community felt like something I had done in a previous life.
 
-<img class="post-hero" width="1000" alt="Python and Django community members at DjangoCon Africa" src="https://github.com/KayO-GH/kayo-gh.github.io/assets/18174012/d643ec7b-ff56-4fcc-a436-4a9b6b69c21e" />
+<figure class="post-figure">
+  <img class="post-hero" width="1000" alt="Python and Django community members at DjangoCon Africa" src="https://github.com/KayO-GH/kayo-gh.github.io/assets/18174012/d643ec7b-ff56-4fcc-a436-4a9b6b69c21e" />
+  <figcaption>DjangoCon Africa 2023</figcaption>
+</figure>
 
 Then I went to DjangoCon Africa in Zanzibar. I met old friends, made new ones, gave my first talk in three years, and became a Django Girls coach again. It was a reminder that the language had never been the whole thing. The language was the excuse for people to show up for one another.
 
