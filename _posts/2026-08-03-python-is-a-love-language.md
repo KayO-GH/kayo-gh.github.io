@@ -70,7 +70,7 @@ Python asks you to care about what the code says, not only what the computer wil
 
 ### The People Behind The Code
 
-The reason I've stuck with Python as my go-to language for something like a decade now has much less to do with `print()` and much more to do with people.
+The reason I've stuck with Python as my go-to language for something like a decade now has much less to do with `print()` and much more to do with people. The Python Software Foundation has fostered a community that lives and breathes beyond the computer screen!
 
 <figure class="post-figure">
   <img class="post-hero" width="1000" alt="Django Girls Hohoe participants and coaches learning together" src="https://miro.medium.com/v2/resize:fit:1400/0*iQrHcXIv5vp95e1e.jpg" />
