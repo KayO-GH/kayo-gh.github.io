@@ -10,7 +10,7 @@ I’m a Senior Data Scientist with an interest in AI/ML & a background in Softwa
   <img src="https://i.redd.it/8lfied3ohyp11.jpg" alt="reddit ML joke" width="500px" text/>
 </center>
 
-- ⌛ Over the last 5 years I have focused on Data Science and Machine Learning, building on a foundation of a decade of experience in Software Engineering.<br/>I have worked, <i>and played</i>, with programming stacks and technologies from microcontrollers through mobile and web app development to cloud systems.
+- ⌛ Over the last 5 years I have focused on Data Science and Machine Learning, building on a foundation of Software Engineering.<br/>I have worked, <i>and played</i>, with programming stacks and technologies from microcontrollers through mobile and web app development to cloud systems.
 - 👨‍💻 I currently work as a Sr. Data Scientist @[Innovations for Poverty Action](https://poverty-action.org/)
 
 <br/>
