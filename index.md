@@ -22,3 +22,6 @@ I’m a Senior Data Scientist with an interest in AI/ML & a background in Softwa
 I write about tech on my [GitHub Blog](https://kayo-gh.github.io/blog), but if you're interested, I run two other blogs with different focus points:
 - [Chopbox Life](https://chopboxlife.com/): A fictional blog based just in part on my life in high school.
 - [Medium](https://medium.com/@kayogh): My Medium blog is dedicated to things that are a little more real and have to do with life.
+
+
+_*Image source: [Reddit](https://github.com/KayO-GH/build-an-agent-python-tutorial/blob/main/.python-version)_
